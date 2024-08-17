@@ -1,0 +1,124 @@
+main {
+    display: flex;
+    width: 100%;
+}
+
+body {
+    font-family: 'Albert Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+h1 {
+    font-size: 35px;
+    font-weight: bolder;
+    color: black;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.padre {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    min-height: 100vh;
+}
+    
+.div1 { 
+    grid-area: 1 / 1 / 2 / 2;
+    background: #B7ABA9;
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+    height: auto;
+}
+
+.div2 { 
+    grid-area: 1 / 2 / 2 / 3;
+    padding-left: 3%;
+    height: auto;
+}
+
+.Texto {
+    float: right;
+    width: 100%;
+    height: auto;
+    line-height: 1.2;
+    font-size: 20px;
+    text-align: justify;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.Contenedor_foto {
+    max-width: 250px;
+    max-height: 250px;
+    border-radius: 50%;
+    margin-top: 2%;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Foto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 250px;
+    max-height: 250px;
+    border-radius: 50%;
+    margin-top: 2%;
+}
+
+#Informacion {
+    float: left;
+    font-size: 20px;
+    height: auto;
+    width: auto;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 2%;
+    text-align: left;
+    text-size-adjust: auto;
+    line-height: 1.2;
+    word-break: break-word;
+}
+
+#Linea {
+    height: 7px;
+    width: 90%;
+    background-color: #3498DB;
+}
+
+#Justificado {
+    text-align: justify;
+}
+
+@media screen and (max-width: 900px) {
+    .padre {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 10px;
+    }
+        
+    .div1 { 
+        grid-area: 1 / 1 / 2 / 2;
+        border-top-right-radius: 0%;
+        border-bottom-left-radius: 5%;
+    }
+
+    .div2 { 
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .Texto {
+        height: 100%;
+        width: 100%;
+    }
+}
